@@ -1,0 +1,21 @@
+ul li {
+  list-style-type: none;
+  font-size: 24px;
+  color: #fff;
+}
+
+li {
+  margin-left: 4rem;
+}
+
+a {
+  text-decoration: none !important;
+  list-style-type: none !important;
+  color: #fff !important;
+}
+
+.header {
+  height: 90px;
+  padding-top: 10px;
+  background-color: #191919;
+}
