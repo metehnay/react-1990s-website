@@ -20,10 +20,17 @@
   border-radius: 14px;
   margin-top: 10px;
   max-height: 350px;
+  cursor: pointer;
+}
+
+#img-photo:hover {
+  transform: scale3d(1.5, 1.5, 1.5);
+  transition: 0.5s all;
 }
 
 .images {
-  background-color: rgb(243, 234, 95);
+  background-color: var(--backo);
+  box-shadow: var(--box);
   border-radius: 14px;
 }
 

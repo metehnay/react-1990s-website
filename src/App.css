@@ -7,16 +7,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto Mono", monospace;
+  font-family: var(--fontu);
 }
 
 body {
-  background-color: #191919 !important;
+  background-color: var(--background-color) !important;
   color: #fff !important;
+  animation: var(--puls) !important;
 }
 
 input {
   color: #000 !important;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover,
+a:hover {
+  color: rgb(243, 234, 95) !important;
 }
 
 @media (max-width: 1024px) {

@@ -83,7 +83,7 @@ const Login = ({ setIsAuth, isAuth }) => {
               type="submit"
               onClick={logged}
             >
-              Sign Up
+              Login
             </Button>
           </Form>
         </Card.Body>
