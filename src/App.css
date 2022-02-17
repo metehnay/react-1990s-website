@@ -18,3 +18,32 @@ body {
 input {
   color: #000 !important;
 }
+
+@media (max-width: 1024px) {
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    left: 0;
+  }
+}
+
+@media (max-width: 870px) {
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    left: 0;
+    width: 190px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 781px) {
+  #img-photo {
+    width: 550px !important;
+    object-fit: fill;
+  }
+
+  .post {
+    padding: 10px;
+  }
+}
