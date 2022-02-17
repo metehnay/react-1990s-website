@@ -14,3 +14,7 @@ body {
   background-color: #191919 !important;
   color: #fff !important;
 }
+
+input {
+  color: #000 !important;
+}
