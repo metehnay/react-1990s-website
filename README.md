@@ -1,3 +1,7 @@
+DEMO: https://upbeat-einstein-75ad4a.netlify.app/
+
+still in progress. not responsive etc. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
