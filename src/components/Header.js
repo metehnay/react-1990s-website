@@ -21,7 +21,6 @@ const Header = ({ isAuth, setIsAuth, modu, setModu }) => {
         <img src={logo} className="logo position-absolute mw-100 left-20" />
         <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
           <DarkMode id="darko" modu={modu} setModu={setModu} />
-          {modu && <li>Another Li</li>}
           <li>
             <Link to={"/"}>Explore</Link>
           </li>

@@ -15,6 +15,9 @@ body.s80 {
   --p: 14px;
   --po: 13px;
   --texto: #fff;
+  --boxi: 0 0 10px 5px red;
+  --puls: pulse 0.7s infinite cubic-bezier(0.22, 0.61, 0.36, 1),
+    fade 5.4s 1 ease-out forwards;
 }
 
 body.dark {
@@ -25,4 +28,13 @@ body.dark {
   --p: 17px;
   --po: 17px;
   --texto: #000;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 5px hsl(140, 68%, 47%), 0 0 0 1px hsl(140, 68%, 47%);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(325, 175, 85, 0), 0 0 0 10px rgba(25, 175, 85, 0);
+  }
 }

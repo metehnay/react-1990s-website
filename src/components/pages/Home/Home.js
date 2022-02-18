@@ -23,10 +23,6 @@ const Home = ({ isAuth, modu, setModu }) => {
     audioTune.play();
   };
 
-  useEffect(() => {
-    audioTune.load();
-  }, []);
-
   const colors = [
     "https://i.ebayimg.com/images/g/eekAAOSw0UdXp80j/s-l400.jpg",
     "https://images-na.ssl-images-amazon.com/images/I/71MYkc9vIgL.__AC_SX300_SY300_QL70_ML2_.jpg",
