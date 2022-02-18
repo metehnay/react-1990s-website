@@ -10,6 +10,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
+import Footer from "../../Footer";
 
 const Login = ({ setIsAuth, isAuth }) => {
   const [loginEmail, setLoginEmail] = useState("");
@@ -88,7 +89,7 @@ const Login = ({ setIsAuth, isAuth }) => {
           </Form>
         </Card.Body>
       </Card>
-      <div className="w-100 text-center mt-2">
+      <div className="ds w-100 text-center mt-2 ds">
         Don't have an account? <Link to="/signup">Sign Up</Link>
       </div>
     </>

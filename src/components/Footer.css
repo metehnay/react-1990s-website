@@ -1,0 +1,32 @@
+.footer {
+  background-color: #161515;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 10px;
+}
+
+#ikon {
+  width: 34px;
+  height: 24px;
+  margin-left: 0.5rem;
+}
+
+#px {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#copy {
+  position: relative;
+  bottom: 4rem;
+}

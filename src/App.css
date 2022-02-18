@@ -13,6 +13,7 @@
 body {
   background-color: var(--background-color) !important;
   color: #fff !important;
+  animation: var(--puls) !important;
 }
 
 input {

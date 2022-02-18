@@ -9,6 +9,7 @@ import { auth } from "./firebase-config";
 import CreatePost from "./components/pages/NewPost/CreatePost";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./components/pages/SignUp/SignUp";
+import Footer from "./components/Footer";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));

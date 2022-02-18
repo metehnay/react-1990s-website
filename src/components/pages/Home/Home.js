@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase-config";
 import mp3file from "./boogie.mp3";
+import Footer from "../../Footer";
 
 const Home = ({ isAuth, modu, setModu }) => {
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "posts");
+  const [audioStatus, changeAudioStatus] = useState(false);
+  const myRef = useRef();
 
   useEffect(() => {
     const getPosts = async () => {
@@ -18,10 +21,6 @@ const Home = ({ isAuth, modu, setModu }) => {
   }, []);
 
   const audioTune = new Audio(mp3file);
-
-  const playSound = () => {
-    audioTune.play();
-  };
 
   const colors = [
     "https://i.ebayimg.com/images/g/eekAAOSw0UdXp80j/s-l400.jpg",
@@ -41,14 +40,32 @@ const Home = ({ isAuth, modu, setModu }) => {
     return colors[Math.floor(Math.random() * colors.length)];
   }
 
+  const startAudio = () => {
+    myRef.current.play();
+
+    changeAudioStatus(true);
+  };
+
+  const pauseAudio = () => {
+    console.log("here");
+    myRef.current.pause();
+    changeAudioStatus(false);
+  };
+
   return (
     <>
       {modu && (
         <div className="buton">
-          <button onClick={playSound} id="anim">
-            {" "}
-            PLAY MUSIC
-          </button>
+          <audio ref={myRef} src={mp3file} />
+          {audioStatus ? (
+            <button onClick={pauseAudio} id="zi">
+              STOP MUSIC
+            </button>
+          ) : (
+            <button onClick={startAudio} id="zi">
+              PLAY MUSIC
+            </button>
+          )}
         </div>
       )}
       <div className="containerx mt-5">
@@ -77,6 +94,7 @@ const Home = ({ isAuth, modu, setModu }) => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

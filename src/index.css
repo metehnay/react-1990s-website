@@ -6,18 +6,19 @@
 }
 
 body.s80 {
-  background: #000096;
-  background: radial-gradient(circle, #000096 0%, #000096 100%);
+  background: rgb(36, 62, 115);
+  background: linear-gradient(
+    90deg,
+    rgba(36, 62, 115, 1) 0%,
+    rgba(214, 31, 139, 1) 35%,
+    rgba(28, 219, 185, 1) 100%
+  );
   --backo: #191919;
-  --box: 0 0 10px 1px hsl(140, 68%, 47%);
   --fontu: "Press Start 2P", cursive;
   --size: 16px;
   --p: 14px;
   --po: 13px;
   --texto: #fff;
-  --boxi: 0 0 10px 5px red;
-  --puls: pulse 0.7s infinite cubic-bezier(0.22, 0.61, 0.36, 1),
-    fade 5.4s 1 ease-out forwards;
 }
 
 body.dark {
@@ -28,13 +29,4 @@ body.dark {
   --p: 17px;
   --po: 17px;
   --texto: #000;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 5px hsl(140, 68%, 47%), 0 0 0 1px hsl(140, 68%, 47%);
-  }
-  100% {
-    box-shadow: 0 0 0 5px rgba(325, 175, 85, 0), 0 0 0 10px rgba(25, 175, 85, 0);
-  }
 }

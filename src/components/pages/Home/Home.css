@@ -1,27 +1,30 @@
 .containerx {
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .posto {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #img-name {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  object-fit: fill;
   margin-left: 2rem;
+  object-fit: fill;
   box-shadow: var(--boxi);
   animation: var(--puls);
 }
 
 #img-photo {
   width: 100%;
-  max-width: 450px;
+  max-width: 420px;
+  margin-right: auto;
+  margin-left: auto;
   border-radius: 14px;
   margin-top: 10px;
   max-height: 350px;
@@ -82,6 +85,12 @@
   display: flex;
   margin-top: 15px;
   font-size: 44px;
-  background-color: #22a152;
+  background-color: #560cb6;
   justify-content: center;
+  opacity: 0.8;
+}
+
+.post {
+  margin-left: auto;
+  margin-right: auto;
 }
