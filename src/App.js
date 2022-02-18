@@ -12,15 +12,25 @@ import SignUp from "./components/pages/SignUp/SignUp";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+  const [modu, setModu] = useState(false);
 
   return (
     <>
       <Router>
         <>
-          <Header setIsAuth={setIsAuth} isAuth={isAuth} />
+          <Header
+            setIsAuth={setIsAuth}
+            isAuth={isAuth}
+            modu={modu}
+            setModu={setModu}
+          />
         </>
         <Routes>
-          <Route exact path="/" element={<Home isAuth={isAuth} />} />
+          <Route
+            exact
+            path="/"
+            element={<Home isAuth={isAuth} modu={modu} setModu={setModu} />}
+          />
           <Route
             path="/login"
             element={<Login isAuth={isAuth} setIsAuth={setIsAuth} />}

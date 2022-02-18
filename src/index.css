@@ -6,15 +6,23 @@
 }
 
 body.s80 {
-  --background-color: rgb(63, 94, 251);
-
-  --backo: hsl(140, 68%, 47%);
+  background: #000096;
+  background: radial-gradient(circle, #000096 0%, #000096 100%);
+  --backo: #191919;
   --box: 0 0 10px 1px hsl(140, 68%, 47%);
   --fontu: "Press Start 2P", cursive;
+  --size: 16px;
+  --p: 14px;
+  --po: 13px;
+  --texto: #fff;
 }
 
 body.dark {
   --background-color: var(--dark);
   --backo: rgb(243, 234, 95);
+  --size: 24px;
   --fontu: "Roboto Mono", monospace;
+  --p: 17px;
+  --po: 17px;
+  --texto: #000;
 }

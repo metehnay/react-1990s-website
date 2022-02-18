@@ -1,6 +1,6 @@
 ul li {
   list-style-type: none;
-  font-size: 24px;
+  font-size: var(--size);
   color: #fff;
 }
 

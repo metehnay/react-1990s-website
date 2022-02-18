@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "./logo.png";
@@ -6,7 +6,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../firebase-config";
 import DarkMode from "./DarkMode";
 
-const Header = ({ isAuth, setIsAuth }) => {
+const Header = ({ isAuth, setIsAuth, modu, setModu }) => {
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -20,8 +20,8 @@ const Header = ({ isAuth, setIsAuth }) => {
       <nav className="w-100  ">
         <img src={logo} className="logo position-absolute mw-100 left-20" />
         <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
-          <DarkMode id="darko" />
-
+          <DarkMode id="darko" modu={modu} setModu={setModu} />
+          {modu && <li>Another Li</li>}
           <li>
             <Link to={"/"}>Explore</Link>
           </li>
