@@ -1,10 +1,10 @@
 import React from "react";
 import NavLinks from "./NavLinks";
 
-const Navigation = () => {
+const Navigation = ({ modu, setModu }) => {
   return (
     <nav className="desktop">
-      <NavLinks />
+      <NavLinks modu={modu} setModu={setModu} />
     </nav>
   );
 };

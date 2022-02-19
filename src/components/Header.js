@@ -5,6 +5,9 @@ import logo from "./logo.png";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase-config";
 import DarkMode from "./DarkMode";
+import NavLinks from "./NavLinks";
+import Navigation from "./Navigation";
+import MobileNavigation from "./MobileNavigation";
 
 const Header = ({ isAuth, setIsAuth, modu, setModu }) => {
   const signUserOut = () => {
@@ -16,36 +19,9 @@ const Header = ({ isAuth, setIsAuth, modu, setModu }) => {
   };
 
   return (
-    <div className="header d-flex bg-white-600  ">
-      <nav className="w-100  ">
-        <img src={logo} className="logo position-absolute mw-100 left-20" />
-        <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
-          <DarkMode id="darko" modu={modu} setModu={setModu} />
-          <li>
-            <Link to={"/"}>Explore</Link>
-          </li>
-          {!isAuth ? (
-            <>
-              <li>
-                <Link to={"/login"}>Login</Link>
-              </li>
-              <li>
-                <Link to={"/signup"}>Sign Up</Link>
-              </li>
-            </>
-          ) : (
-            <>
-              <li>
-                {" "}
-                <Link to={"/newpost"}>New Post</Link>
-              </li>
-              <li onClick={signUserOut} id="log">
-                Log Out
-              </li>
-            </>
-          )}
-        </ul>
-      </nav>
+    <div className="Navbar">
+      <Navigation modu={modu} setModu={setModu} />
+      <MobileNavigation modu={modu} setModu={setModu} />
     </div>
   );
 };

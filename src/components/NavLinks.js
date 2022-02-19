@@ -5,7 +5,15 @@ import MobileNavigation from "./MobileNavigation";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase-config";
 import { Link } from "react-router-dom";
-const NavLinks = ({ isMobile, closeItem, isAuth, setIsAuth }) => {
+import DarkMode from "./DarkMode";
+const NavLinks = ({
+  isMobile,
+  closeItem,
+  isAuth,
+  setIsAuth,
+  modu,
+  setModu,
+}) => {
   const signUserOut = () => {
     signOut(auth).then(() => {
       localStorage.clear();
@@ -21,8 +29,13 @@ const NavLinks = ({ isMobile, closeItem, isAuth, setIsAuth }) => {
     <>
       <div className="header d-flex bg-white-600  ">
         <nav className="w-100  ">
-          <img src={logo} className="logo position-absolute mw-100 left-20" />
+          <img
+            src={logo}
+            className="logo position-absolute mw-100 left-20"
+            id="log"
+          />
           <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
+            <DarkMode id="darko" modu={modu} setModu={setModu} />
             <li>
               <Link to={"/"}>Explore</Link>
             </li>

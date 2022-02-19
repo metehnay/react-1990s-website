@@ -3,8 +3,9 @@ import NavLinks from "./NavLinks";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import logo from "./logo.png";
+import DarkMode from "./DarkMode";
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ modu, setModu }) => {
   const [open, setOpen] = useState(false);
 
   const burgerIcon = (
@@ -28,10 +29,14 @@ const MobileNavigation = () => {
   return (
     <nav className="mobile-navigation">
       <div className="burgers">{open ? closeIcon : burgerIcon}</div>
-      <div className="c"></div>
-      <div className="logos"></div>
-
-      {open && <NavLinks isMobile={true} closeItem={closeItem} />}
+      {open && (
+        <NavLinks
+          isMobile={true}
+          closeItem={closeItem}
+          modu={modu}
+          setModu={setModu}
+        />
+      )}
     </nav>
   );
 };
