@@ -40,7 +40,7 @@ const CreatePost = ({ isAuth }) => {
 
   return (
     <>
-      <Container fluid="p-5 d-flex justify-content-center mt-5">
+      <Container fluid="p-5 d-flex justify-content-center mt-5 pt-5">
         <Form>
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
             <Form.Label column sm={2}>
@@ -87,7 +87,7 @@ const CreatePost = ({ isAuth }) => {
 
           <Form.Group as={Row} className="mb-3">
             <Col sm={{ span: 10, offset: 2 }}>
-              <Button variant="primary" onClick={createPost}>
+              <Button variant="warning" onClick={createPost}>
                 Submit
               </Button>
             </Col>

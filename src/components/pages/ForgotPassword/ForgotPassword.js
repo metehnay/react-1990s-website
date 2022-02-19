@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./ForgotPassword.css";
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import { sendPasswordResetEmail } from "firebase/auth";
+import { Link } from "react-router-dom";
 import { auth, provider } from "../../../firebase-config";
 
 const ForgotPassword = () => {
@@ -24,6 +25,16 @@ const ForgotPassword = () => {
 
   return (
     <>
+      <div className="login mt-16">
+        <div className="login1">
+          <Link
+            to="/login"
+            className="mb-4 bg-yellow-400 p-2 rounded text-dark"
+          >
+            Back to login page
+          </Link>
+        </div>
+      </div>
       <Card className="w-100 custom-con">
         <Card.Body className="d-flex justify-content-center" id="custom">
           <Form>

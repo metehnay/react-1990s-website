@@ -130,6 +130,7 @@ a:hover {
   .Navbar .mobile-navigation {
     display: flex !important;
     padding-bottom: 1.2rem;
+    width: 100% !important;
   }
 
   .Hamburger {
@@ -159,7 +160,7 @@ a:hover {
     left: 0;
     padding: 10px;
     z-index: 99999 !important;
-    width: 100%;
+    width: 100% !important;
     opacity: 1 !important;
     background-color: #191919;
   }
@@ -170,10 +171,6 @@ a:hover {
   }
 
   #darkMode {
-    display: none;
-  }
-
-  #log {
     display: none;
   }
 }

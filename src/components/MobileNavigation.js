@@ -5,7 +5,7 @@ import { MdOutlineClose } from "react-icons/md";
 import logo from "./logo.png";
 import DarkMode from "./DarkMode";
 
-const MobileNavigation = ({ modu, setModu }) => {
+const MobileNavigation = ({ modu, setModu, isAuth, setIsAuth }) => {
   const [open, setOpen] = useState(false);
 
   const burgerIcon = (
@@ -36,6 +36,8 @@ const MobileNavigation = ({ modu, setModu }) => {
           closeItem={closeItem}
           modu={modu}
           setModu={setModu}
+          isAuth={isAuth}
+          setIsAuth={setIsAuth}
         />
       )}
     </nav>

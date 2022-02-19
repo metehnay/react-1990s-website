@@ -36,41 +36,65 @@ const NavLinks = ({
           />
           <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
             <DarkMode id="darko" modu={modu} setModu={setModu} />
-            <li>
-              <Link to="/" onClick={() => isMobile && closeItem(false)}>
-                Explore
-              </Link>
-            </li>
+            <motion.div
+              initial={animateForm}
+              animate={animateTo}
+              transition={{ delay: 0.05 }}
+            >
+              <li>
+                <Link to="/" onClick={() => isMobile && closeItem(false)}>
+                  Explore
+                </Link>
+              </li>
+            </motion.div>
             {!isAuth ? (
               <>
-                <li>
-                  <Link
-                    to="/login"
-                    onClick={() => isMobile && closeItem(false)}
-                  >
-                    Login
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/signup"
-                    onClick={() => isMobile && closeItem(false)}
-                  >
-                    Sign Up
-                  </Link>
-                </li>
+                <motion.div
+                  initial={animateForm}
+                  animate={animateTo}
+                  transition={{ delay: 0.05 }}
+                >
+                  <li>
+                    <Link
+                      to="/login"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Login
+                    </Link>
+                  </li>
+                </motion.div>
+                <motion.div
+                  initial={animateForm}
+                  animate={animateTo}
+                  transition={{ delay: 0.05 }}
+                >
+                  <li>
+                    <Link
+                      to="/signup"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Sign Up
+                    </Link>
+                  </li>
+                </motion.div>
               </>
             ) : (
               <>
-                <li>
-                  {" "}
-                  <Link
-                    to="/newpost"
-                    onClick={() => isMobile && closeItem(false)}
-                  >
-                    New Post
-                  </Link>
-                </li>
+                <motion.div
+                  initial={animateForm}
+                  animate={animateTo}
+                  transition={{ delay: 0.05 }}
+                >
+                  <li>
+                    {" "}
+                    <Link
+                      to="/newpost"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      New Post
+                    </Link>
+                  </li>
+                </motion.div>
                 <li onClick={signUserOut} id="log">
                   Log Out
                 </li>
