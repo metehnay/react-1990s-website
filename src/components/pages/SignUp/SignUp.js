@@ -28,7 +28,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Card className="w-100 custom-con">
+      <Card className="w-100 custom-con fr">
         <Card.Body className="d-flex justify-content-center" id="custom">
           <Form onSubmit={handleAction}>
             <Form.Group id="email">

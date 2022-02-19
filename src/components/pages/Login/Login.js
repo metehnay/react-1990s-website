@@ -86,6 +86,12 @@ const Login = ({ setIsAuth, isAuth }) => {
             >
               Login
             </Button>
+            <div className="forgo">
+              {" "}
+              <Link to="/forgotpassword" id="forgot">
+                Forgot Password?
+              </Link>
+            </div>
           </Form>
         </Card.Body>
       </Card>

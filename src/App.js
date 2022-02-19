@@ -10,6 +10,7 @@ import CreatePost from "./components/pages/NewPost/CreatePost";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./components/pages/SignUp/SignUp";
 import Footer from "./components/Footer";
+import ForgotPassword from "./components/pages/ForgotPassword/ForgotPassword";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -38,6 +39,7 @@ function App() {
           />
           <Route path="/newpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
         </Routes>
       </Router>
     </>

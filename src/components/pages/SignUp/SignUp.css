@@ -7,6 +7,11 @@
   border: none !important;
 }
 
-.ds {
-  min-height: 100%;
+.fr {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column;
+  margin-top: 10rem !important;
+  background-color: #191919 !important;
 }

@@ -37,22 +37,39 @@ const NavLinks = ({
           <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
             <DarkMode id="darko" modu={modu} setModu={setModu} />
             <li>
-              <Link to={"/"}>Explore</Link>
+              <Link to="/" onClick={() => isMobile && closeItem(false)}>
+                Explore
+              </Link>
             </li>
             {!isAuth ? (
               <>
                 <li>
-                  <Link to={"/login"}>Login</Link>
+                  <Link
+                    to="/login"
+                    onClick={() => isMobile && closeItem(false)}
+                  >
+                    Login
+                  </Link>
                 </li>
                 <li>
-                  <Link to={"/signup"}>Sign Up</Link>
+                  <Link
+                    to="/signup"
+                    onClick={() => isMobile && closeItem(false)}
+                  >
+                    Sign Up
+                  </Link>
                 </li>
               </>
             ) : (
               <>
                 <li>
                   {" "}
-                  <Link to={"/newpost"}>New Post</Link>
+                  <Link
+                    to="/newpost"
+                    onClick={() => isMobile && closeItem(false)}
+                  >
+                    New Post
+                  </Link>
                 </li>
                 <li onClick={signUserOut} id="log">
                   Log Out

@@ -20,8 +20,18 @@ const Header = ({ isAuth, setIsAuth, modu, setModu }) => {
 
   return (
     <div className="Navbar">
-      <Navigation modu={modu} setModu={setModu} />
-      <MobileNavigation modu={modu} setModu={setModu} />
+      <Navigation
+        modu={modu}
+        setModu={setModu}
+        isAuth={isAuth}
+        setIsAuth={setIsAuth}
+      />
+      <MobileNavigation
+        modu={modu}
+        setModu={setModu}
+        isAuth={isAuth}
+        setIsAuth={setIsAuth}
+      />
     </div>
   );
 };

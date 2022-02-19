@@ -15,3 +15,13 @@
 .ds {
   min-height: 100%;
 }
+
+#forgot {
+  margin-top: 10px !important;
+  color: yellow !important;
+}
+
+.forgo {
+  display: flex;
+  justify-content: flex-end;
+}
