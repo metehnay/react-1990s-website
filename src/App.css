@@ -129,6 +129,7 @@ a:hover {
   }
   .Navbar .mobile-navigation {
     display: flex !important;
+    padding-bottom: 1.2rem;
   }
 
   .Hamburger {
