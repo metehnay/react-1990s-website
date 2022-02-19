@@ -140,7 +140,7 @@ a:hover {
 
   .Navbar .burgers {
     background-color: #191919;
-    height: 85px;
+    height: 95px !important;
     width: 100%;
     position: fixed;
     top: -10px;
@@ -157,9 +157,10 @@ a:hover {
     right: 0;
     left: 0;
     padding: 10px;
+    z-index: 99999 !important;
     width: 100%;
-    opacity: 1;
-    background-color: #000000;
+    opacity: 1 !important;
+    background-color: #191919;
   }
 
   li {
@@ -172,6 +173,29 @@ a:hover {
   }
 
   #log {
+    display: none;
+  }
+}
+
+#mob {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: 5px;
+}
+
+@media (max-width: 339px) {
+  #mob {
+    width: 150px;
+    height: 70px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 225px) {
+  #mob {
     display: none;
   }
 }

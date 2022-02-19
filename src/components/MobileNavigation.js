@@ -28,6 +28,7 @@ const MobileNavigation = ({ modu, setModu }) => {
   const closeItem = () => setOpen(false);
   return (
     <nav className="mobile-navigation">
+      <img src={logo} id="mob" />
       <div className="burgers">{open ? closeIcon : burgerIcon}</div>
       {open && (
         <NavLinks
