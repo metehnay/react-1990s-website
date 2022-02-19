@@ -4,6 +4,8 @@ import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase-config";
 import mp3file from "./boogie.mp3";
 import Footer from "../../Footer";
+import funo from "./funo.png";
+import ArcadeGame from "../Game/ArcadeGame";
 
 const Home = ({ isAuth, modu, setModu }) => {
   const [postLists, setPostList] = useState([]);
@@ -54,20 +56,28 @@ const Home = ({ isAuth, modu, setModu }) => {
 
   return (
     <>
-      {modu && (
-        <div className="buton">
-          <audio ref={myRef} src={mp3file} />
-          {audioStatus ? (
-            <button onClick={pauseAudio} id="zi">
-              STOP MUSIC
-            </button>
-          ) : (
-            <button onClick={startAudio} id="zi">
-              PLAY MUSIC
-            </button>
-          )}
-        </div>
-      )}
+      <div className="fun">
+        {modu && (
+          <div className="buton">
+            <audio ref={myRef} src={mp3file} />
+            {audioStatus ? (
+              <button onClick={pauseAudio} id="zi">
+                STOP MUSIC
+              </button>
+            ) : (
+              <button onClick={startAudio} id="zi">
+                PLAY MUSIC
+              </button>
+            )}
+          </div>
+        )}
+        {modu && (
+          <div className="arcade">
+            <ArcadeGame />
+          </div>
+        )}
+      </div>
+
       <div className="containerx mt-5">
         <div className="posto">
           {postLists.map((post) => {

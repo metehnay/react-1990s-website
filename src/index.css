@@ -17,15 +17,11 @@ body.s80 {
 
 body.dark {
   background: rgb(36, 62, 115);
-  background: linear-gradient(
-    90deg,
-    rgba(36, 62, 115, 1) 0%,
-    rgba(214, 31, 139, 1) 35%,
-    rgba(28, 219, 185, 1) 100%
-  );
+  background: linear-gradient(90deg, #000000 0%, #131212 35%, #000000 100%);
   --backo: #191919;
   --fontu: "Press Start 2P", cursive;
   --size: 16px;
+  --header: blue;
   --p: 14px;
   --po: 13px;
   --texto: #fff;

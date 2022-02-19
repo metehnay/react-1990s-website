@@ -16,5 +16,13 @@ a {
 
 .header {
   height: 90px;
+  background-color: var(--header);
   padding-top: 10px;
+}
+
+.Navbar {
+  position: sticky;
+  top: 0rem;
+  z-index: 99999;
+  background-color: #191919;
 }
