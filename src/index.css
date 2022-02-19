@@ -6,6 +6,16 @@
 }
 
 body.s80 {
+  --background-color: var(--dark);
+  --backo: rgb(243, 234, 95);
+  --size: 24px;
+  --fontu: "Roboto Mono", monospace;
+  --p: 17px;
+  --po: 17px;
+  --texto: #000;
+}
+
+body.dark {
   background: rgb(36, 62, 115);
   background: linear-gradient(
     90deg,
@@ -19,14 +29,4 @@ body.s80 {
   --p: 14px;
   --po: 13px;
   --texto: #fff;
-}
-
-body.dark {
-  --background-color: var(--dark);
-  --backo: rgb(243, 234, 95);
-  --size: 24px;
-  --fontu: "Roboto Mono", monospace;
-  --p: 17px;
-  --po: 17px;
-  --texto: #000;
 }

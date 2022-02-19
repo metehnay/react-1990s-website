@@ -4,7 +4,7 @@
   height: 45px;
   margin-left: 20px;
   transition: background-color 0.3s ease-in-out, filter 0.3s ease-in-out;
-  background: transparent url("./80son.png") no-repeat center;
+  background: transparent url("./80s.png") no-repeat center;
 }
 
 #darkMode:hover,
@@ -16,7 +16,7 @@
 
 #darkMode.clicked {
   transition: 0.5s all;
-  background: transparent url("./80s.png") no-repeat center;
+  background: transparent url("./80son.png") no-repeat center;
   background-size: 85px 45px;
   filter: none !important;
 }

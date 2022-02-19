@@ -24,13 +24,13 @@ const DarkMode = ({ modu, setModu }) => {
       e.target.classList.remove(clickedClass);
       localStorage.setItem("theme", "s80");
       theme = s80Theme;
-      setModu(!false);
+      setModu(!true);
     } else {
       body.classList.replace(s80Theme, darkTheme);
       e.target.classList.add(clickedClass);
       localStorage.setItem("theme", "dark");
       theme = darkTheme;
-      setModu(!true);
+      setModu(!false);
     }
   };
 
