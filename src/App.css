@@ -29,6 +29,72 @@ a:hover {
   color: rgb(243, 234, 95) !important;
 }
 
+@media (max-width: 1235px) {
+  .posto {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+  nav {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 822px) {
+  .posto {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 821px) {
+  .posto {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  #img-photo {
+    width: 100%;
+    max-width: 280px !important;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 14px;
+    margin-top: 10px;
+    max-height: 350px;
+    cursor: pointer;
+  }
+
+  .images {
+    max-width: 280px !important;
+  }
+}
+
+@media (max-width: 705px) {
+  .posto {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    padding: 30px !important;
+  }
+
+  .post {
+    width: 100%;
+  }
+
+  #img-photo {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+  }
+
+  #img-name {
+    margin: 0px !important;
+  }
+
+  .images {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0px !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .logo {
     display: flex;
@@ -48,11 +114,6 @@ a:hover {
 }
 
 @media (max-width: 781px) {
-  #img-photo {
-    width: 550px !important;
-    object-fit: fill;
-  }
-
   .post {
     padding: 10px;
   }

@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px;
 }
 
 #img-name {
@@ -88,9 +89,4 @@
   background-color: #560cb6;
   justify-content: center;
   opacity: 0.8;
-}
-
-.post {
-  margin-left: auto;
-  margin-right: auto;
 }
