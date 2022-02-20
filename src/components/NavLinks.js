@@ -29,11 +29,13 @@ const NavLinks = ({
     <>
       <div className="header d-flex bg-white-600  ">
         <nav className="w-100  ">
-          <img
-            src={logo}
-            className="logo position-absolute mw-100 left-20"
-            id="log"
-          />
+          <Link to="/">
+            <img
+              src={logo}
+              className="logo position-absolute mw-100 left-20"
+              id="log"
+            />
+          </Link>
           <ul className="d-flex justify-content-center align-items-center mt-3 opacity-90">
             <DarkMode id="darko" modu={modu} setModu={setModu} />
             <motion.div
@@ -43,7 +45,18 @@ const NavLinks = ({
             >
               <li>
                 <Link to="/" onClick={() => isMobile && closeItem(false)}>
-                  Explore
+                  Photos
+                </Link>
+              </li>
+            </motion.div>
+            <motion.div
+              initial={animateForm}
+              animate={animateTo}
+              transition={{ delay: 0.05 }}
+            >
+              <li>
+                <Link to="/games" onClick={() => isMobile && closeItem(false)}>
+                  Games
                 </Link>
               </li>
             </motion.div>
@@ -91,7 +104,22 @@ const NavLinks = ({
                       to="/newpost"
                       onClick={() => isMobile && closeItem(false)}
                     >
-                      New Post
+                      Add Photo
+                    </Link>
+                  </li>
+                </motion.div>
+                <motion.div
+                  initial={animateForm}
+                  animate={animateTo}
+                  transition={{ delay: 0.05 }}
+                >
+                  <li>
+                    {" "}
+                    <Link
+                      to="/addgame"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Add Game
                     </Link>
                   </li>
                 </motion.div>
