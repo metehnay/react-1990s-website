@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase-config";
 import { Modal, Button } from "react-bootstrap";
+import "./Games.css";
+import NewGame from "./NewGame";
 
 const GameComponent = () => {
   const [frameList, setFrameList] = useState([]);
@@ -43,15 +45,7 @@ const GameComponent = () => {
                   aria-labelledby="example-modal-sizes-title-lg"
                 >
                   <Modal.Body>
-                    <iframe
-                      src={fram.frame}
-                      id="frame"
-                      frameborder="no"
-                      allowfullscreen="true"
-                      webkitallowfullscreen="true"
-                      mozallowfullscreen="true"
-                      scrolling="no"
-                    ></iframe>
+                    <NewGame />
                   </Modal.Body>
                   <Modal.Footer>
                     <Button variant="warning" onClick={handleClose}>

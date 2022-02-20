@@ -25,17 +25,15 @@ const Home = ({ isAuth, modu, setModu }) => {
   const audioTune = new Audio(mp3file);
 
   const colors = [
-    "https://i.ebayimg.com/images/g/eekAAOSw0UdXp80j/s-l400.jpg",
-    "https://images-na.ssl-images-amazon.com/images/I/71MYkc9vIgL.__AC_SX300_SY300_QL70_ML2_.jpg",
-    "https://cdn.shopify.com/s/files/1/0023/6178/6426/products/70s-disco-dirtbag-kit.jpg?v=1603132627",
-    "https://i.pinimg.com/564x/eb/3c/63/eb3c6343eac28283ab9d40aefb1eb213--moustache-party-disco-party.jpg",
-    "https://img.fruugo.com/product/2/66/138380662_max.jpg",
-    "https://m.media-amazon.com/images/I/61ngh-uhlML._SL1500_.jpg",
-    "http://cdn.shopify.com/s/files/1/0802/9923/products/4eebce572bc190c7ca77f3e2855aede63bdc8024_500x_2x.progressive_dc844294-8e36-4298-ac44-e8a288cc7ac2_grande.jpg?v=1626112467",
-    "http://thumb2.zeppy.io/d/l400/pict/401354256679/mens-70s-super-trouper-brown-wig-moustache-disco-fancy-dress-accessory",
-    "https://m.media-amazon.com/images/I/A1fHNlVMHIL._AC_UL1500_.jpg",
-    "https://m.media-amazon.com/images/I/61syBWzmPnL._AC_UX385_.jpg",
-    "https://images-na.ssl-images-amazon.com/images/I/712yCSooCtS._SL1500_.jpg",
+    "https://image.api.playstation.com/cdn/UP2135/CUSA04242_00/qgdTIEcH3gFsQ5ck5foNMiId6C2tTQ3w.png?w=960&h=960",
+    "https://image.api.playstation.com/cdn/UP2135/CUSA04242_00/Ay55lRjPnoTmk9r6eT9dxczejRoNIcdD.png?w=960&h=960",
+    "https://pbs.twimg.com/profile_images/2142061452/mm_yellow_400x400.jpg",
+    "https://img02.imgsinemalar.com/images/karakter_buyuk/10548/Lloyd-Christmas-3.jpg",
+    "https://pbs.twimg.com/profile_images/690011114730569728/TaJdInRk_400x400.jpg",
+    "https://images.theconversation.com/files/437399/original/file-20211214-17-1jwkeo1.png?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
+    "https://im.haberturk.com/2019/11/05/ver1572953407/2537577_2195097b200e80703e86e04d51446be8.jpg",
+    "https://www.tersninja.com/wp-content/uploads/2008/09/big_lebowski.jpg",
+    "https://store.playstation.com/store/api/chihiro/00_09_000/container/PE/es/19/UP2135-CUSA04242_00-AV00000000000057/image?w=320&h=320&bg_color=000000&opacity=100&_version=00_09_000",
   ];
 
   function randomColor(colors) {
@@ -77,7 +75,6 @@ const Home = ({ isAuth, modu, setModu }) => {
           </div>
         )}
       </div>
-
       <div className="containerx mt-5">
         <div className="posto">
           {postLists.map((post) => {

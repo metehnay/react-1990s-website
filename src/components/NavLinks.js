@@ -3,6 +3,7 @@ import logo from "./logo.png";
 import { motion } from "framer-motion";
 import MobileNavigation from "./MobileNavigation";
 import { signOut } from "firebase/auth";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { auth } from "../firebase-config";
 import { Link } from "react-router-dom";
 import DarkMode from "./DarkMode";
@@ -93,39 +94,51 @@ const NavLinks = ({
               </>
             ) : (
               <>
-                <motion.div
-                  initial={animateForm}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                >
-                  <li>
-                    {" "}
-                    <Link
-                      to="/newpost"
+                <li>
+                  <DropdownButton
+                    id="dropdown-button-dark-example2"
+                    variant="secondary"
+                    menuVariant="dark"
+                    title="Create Post"
+                    className="mt-2"
+                  >
+                    <Dropdown.Item
+                      href="/newpost"
+                      active
                       onClick={() => isMobile && closeItem(false)}
                     >
                       Add Photo
-                    </Link>
-                  </li>
-                </motion.div>
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      href="/addgame"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Add Game
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      href="/addmusic"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Add Music
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item
+                      href="#/action-4"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Add Video
+                    </Dropdown.Item>
+                  </DropdownButton>
+                </li>
                 <motion.div
                   initial={animateForm}
                   animate={animateTo}
                   transition={{ delay: 0.05 }}
                 >
-                  <li>
-                    {" "}
-                    <Link
-                      to="/addgame"
-                      onClick={() => isMobile && closeItem(false)}
-                    >
-                      Add Game
-                    </Link>
+                  <li onClick={signUserOut} id="log">
+                    Log Out
                   </li>
                 </motion.div>
-                <li onClick={signUserOut} id="log">
-                  Log Out
-                </li>
               </>
             )}
           </ul>
