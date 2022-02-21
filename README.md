@@ -1,4 +1,4 @@
-DEMO: https://upbeat-einstein-75ad4a.netlify.app/
+DEMO: https://frosty-ardinghelli-a8970c.netlify.app/
 
 still in progress. not responsive etc. 
 
