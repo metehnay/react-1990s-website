@@ -61,6 +61,17 @@ const NavLinks = ({
                 </Link>
               </li>
             </motion.div>
+            <motion.div
+              initial={animateForm}
+              animate={animateTo}
+              transition={{ delay: 0.05 }}
+            >
+              <li>
+                <Link to="/musics" onClick={() => isMobile && closeItem(false)}>
+                  Music
+                </Link>
+              </li>
+            </motion.div>
             {!isAuth ? (
               <>
                 <motion.div
@@ -97,14 +108,13 @@ const NavLinks = ({
                 <li>
                   <DropdownButton
                     id="dropdown-button-dark-example2"
-                    variant="secondary"
+                    variant="warning"
                     menuVariant="dark"
                     title="Create Post"
                     className="mt-2"
                   >
                     <Dropdown.Item
                       href="/newpost"
-                      active
                       onClick={() => isMobile && closeItem(false)}
                     >
                       Add Photo

@@ -7,7 +7,6 @@ import { Form, Button, Row, Col, Card, Container } from "react-bootstrap";
 
 const AddMusic = ({ isAuth }) => {
   const [musicEmbed, setMusicEmbed] = useState("");
-  const [musicImage, setMusicImage] = useState("");
   const [musicTitle, setMusicTitle] = useState("");
 
   const postsCollectionRef = collection(db, "music");
@@ -16,7 +15,6 @@ const AddMusic = ({ isAuth }) => {
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
       musicTitle,
-      musicImage,
       musicEmbed,
       name: auth.currentUser.displayName,
       id: auth.currentUser.uid,
@@ -24,7 +22,7 @@ const AddMusic = ({ isAuth }) => {
       photoURL: auth.currentUser.photoURL,
     });
 
-    navigate("/games");
+    navigate("/musics");
   };
 
   return (
@@ -54,19 +52,6 @@ const AddMusic = ({ isAuth }) => {
             </Form.Label>
             <Col sm={10}>
               <Form.Control type="text" placeholder="Music Embed" />
-            </Col>
-          </Form.Group>
-
-          <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-            <Form.Label column sm={2}>
-              Music Pic
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Control
-                type="text"
-                placeholder="Photo URL..."
-                onChange={(e) => setMusicImage(e.target.value)}
-              />
             </Col>
           </Form.Group>
 

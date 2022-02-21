@@ -1,0 +1,42 @@
+#music-title {
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.music-container {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.height {
+  width: 1600px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.inside-musics {
+  display: flex;
+  margin: 10px;
+}
+
+.music1 {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  flex-direction: row;
+}
+.music-btn {
+  color: #000;
+  background-color: #e6dc57;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.gridso {
+  display: flex;
+  flex-direction: column;
+}

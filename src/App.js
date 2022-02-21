@@ -16,6 +16,7 @@ import ArcadeRoom from "./components/pages/Game/ArcadeRoom";
 import NewGame from "./components/pages/Game/NewGame";
 import GameComponent from "./components/pages/Game/GameComponent";
 import AddMusic from "./components/pages/Music/AddMusic";
+import Musics from "./components/pages/Music/Musics";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -49,6 +50,7 @@ function App() {
           <Route path="/addgame" element={<NewGame />} />
           <Route path="/games" element={<GameComponent />} />
           <Route path="/addmusic" element={<AddMusic />} />
+          <Route path="/musics" element={<Musics />} />
         </Routes>
       </Router>
     </>
