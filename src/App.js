@@ -17,6 +17,8 @@ import NewGame from "./components/pages/Game/NewGame";
 import GameComponent from "./components/pages/Game/GameComponent";
 import AddMusic from "./components/pages/Music/AddMusic";
 import Musics from "./components/pages/Music/Musics";
+import Videos from "./components/pages/Videos/Videos";
+import AddVideo from "./components/pages/Videos/AddVideo";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -51,6 +53,8 @@ function App() {
           <Route path="/games" element={<GameComponent />} />
           <Route path="/addmusic" element={<AddMusic />} />
           <Route path="/musics" element={<Musics />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/addvideo" element={<AddVideo />} />
         </Routes>
       </Router>
     </>

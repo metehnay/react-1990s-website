@@ -133,7 +133,7 @@ const NavLinks = ({
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item
-                      href="#/action-4"
+                      href="/addvideo"
                       onClick={() => isMobile && closeItem(false)}
                     >
                       Add Video

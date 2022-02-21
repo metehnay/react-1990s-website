@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Modal, Button, RouteModal } from "react-bootstrap";
 import Iframe from "react-iframe";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
-const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
+const VideoModal = ({ videoTitle, videoEmbed }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -25,7 +25,7 @@ const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
       >
         <Modal.Body>
           <Iframe
-            url={musicEmbed}
+            url={videoEmbed}
             width="100%"
             height="450px"
             id="myId"
@@ -44,4 +44,4 @@ const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
   );
 };
 
-export default MusicModal;
+export default VideoModal;

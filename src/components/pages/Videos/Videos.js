@@ -3,49 +3,49 @@ import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "../../../firebase-config";
 import { Modal, Button, RouteModal } from "react-bootstrap";
 import Iframe from "react-iframe";
-import "./Musics.css";
-import MusicModal from "./MusicModal";
+import "./Videos.css";
+import VideoModal from "./VideoModal";
 
-const Musics = () => {
-  const [musicList, setMusicList] = useState([]);
-  const postsCollectionRef = collection(db, "music");
+const Videos = () => {
+  const [videoList, setVideoList] = useState([]);
+  const postsCollectionRef = collection(db, "videos");
   const myRef = useRef();
 
   useEffect(() => {
-    const getFrame = async () => {
+    const getVideo = async () => {
       const data = await getDocs(postsCollectionRef);
-      setMusicList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      setVideoList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
 
-    getFrame();
+    getVideo();
   }, []);
 
   return (
     <div className="music-container">
       <div className="height">
-        {musicList.map((musics) => {
-          let embedChange = musics.musicEmbed;
+        {videoList.map((vido) => {
+          let embedChange = vido.videoEmbed;
           let newEmbed = embedChange.replace("watch?v=", "embed/");
 
-          console.log(embedChange);
           let patos = embedChange.replace(
             "https://www.youtube.com/watch?v=",
             ""
           );
+          console.log(embedChange);
+
           return (
-            <div className="musics">
-              <div className="inside-musics">
-                <div className="music1">
+            <div className="videos">
+              <div className="inside-videos">
+                <div className="video1">
                   <img
                     src={`https://img.youtube.com/vi/${patos}/mqdefault.jpg`}
                     id="music-thumb"
                   />
-                  <div className="gridso">
-                    <h2 id="music-title">{musics.musicTitle}</h2>
-
-                    <MusicModal
-                      musicTitle={musics.musicTitle}
-                      musicEmbed={newEmbed}
+                  <div className="video-gridso">
+                    <h2 id="video-title">{vido.videoTitle}</h2>
+                    <VideoModal
+                      videoTitle={vido.videoTitle}
+                      videoEmbed={newEmbed}
                     />
                   </div>
                 </div>
@@ -58,4 +58,4 @@ const Musics = () => {
   );
 };
 
-export default Musics;
+export default Videos;
