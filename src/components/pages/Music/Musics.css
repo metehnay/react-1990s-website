@@ -1,25 +1,12 @@
 #music-title {
   font-size: 24px;
-  margin: 10px;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .music-container {
-  margin: 10px;
-  padding: 10px;
   display: flex;
   flex-direction: column;
-}
-
-.height {
-  width: 1600px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-.inside-musics {
-  display: flex;
-  margin: 10px;
+  margin-top: 40px;
 }
 
 .music1 {
@@ -36,7 +23,39 @@
   border-radius: 4px;
 }
 
-.gridso {
+.musics {
+  margin-left: 65px;
+  margin-right: auto;
+}
+
+#music-thumb {
+  width: 150px;
+  height: 135px;
+}
+
+.flexo {
   display: flex;
-  flex-direction: column;
+}
+
+#music-img {
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#music-img:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+  transition: 0.5s all;
+  height: 150px;
+  width: 150px;
+}
+
+#music-name {
+  margin-top: 10px;
+}
+
+#share {
+  margin: 10px;
 }

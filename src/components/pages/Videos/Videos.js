@@ -21,8 +21,8 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className="music-container">
-      <div className="height">
+    <div className="video-container">
+      <div className="video-height">
         {videoList.map((vido) => {
           let embedChange = vido.videoEmbed;
           let newEmbed = embedChange.replace("watch?v=", "embed/");
@@ -35,19 +35,21 @@ const Videos = () => {
 
           return (
             <div className="videos">
-              <div className="inside-videos">
-                <div className="video1">
-                  <img
-                    src={`https://img.youtube.com/vi/${patos}/mqdefault.jpg`}
-                    id="music-thumb"
-                  />
-                  <div className="video-gridso">
-                    <h2 id="video-title">{vido.videoTitle}</h2>
-                    <VideoModal
-                      videoTitle={vido.videoTitle}
-                      videoEmbed={newEmbed}
-                    />
+              <div className="video1">
+                <img
+                  src={`https://img.youtube.com/vi/${patos}/mqdefault.jpg`}
+                  id="music-thumb"
+                />
+                <div className="video-gridso">
+                  <h2 id="video-title">{vido.videoTitle}</h2>
+                  <div className="flexo">
+                    <img src={vido.photoURL} id="music-img" />
+                    <p id="music-name">{vido.name}</p>
                   </div>
+                  <VideoModal
+                    videoTitle={vido.videoTitle}
+                    videoEmbed={newEmbed}
+                  />
                 </div>
               </div>
             </div>

@@ -50,14 +50,15 @@ const NavLinks = ({
                 </Link>
               </li>
             </motion.div>
+
             <motion.div
               initial={animateForm}
               animate={animateTo}
               transition={{ delay: 0.05 }}
             >
               <li>
-                <Link to="/games" onClick={() => isMobile && closeItem(false)}>
-                  Games
+                <Link to="/videos" onClick={() => isMobile && closeItem(false)}>
+                  Videos
                 </Link>
               </li>
             </motion.div>
@@ -68,7 +69,18 @@ const NavLinks = ({
             >
               <li>
                 <Link to="/musics" onClick={() => isMobile && closeItem(false)}>
-                  Music
+                  Musics
+                </Link>
+              </li>
+            </motion.div>
+            <motion.div
+              initial={animateForm}
+              animate={animateTo}
+              transition={{ delay: 0.05 }}
+            >
+              <li>
+                <Link to="/games" onClick={() => isMobile && closeItem(false)}>
+                  Games
                 </Link>
               </li>
             </motion.div>
@@ -82,23 +94,10 @@ const NavLinks = ({
                   <li>
                     <Link
                       to="/login"
+                      id="login"
                       onClick={() => isMobile && closeItem(false)}
                     >
                       Login
-                    </Link>
-                  </li>
-                </motion.div>
-                <motion.div
-                  initial={animateForm}
-                  animate={animateTo}
-                  transition={{ delay: 0.05 }}
-                >
-                  <li>
-                    <Link
-                      to="/signup"
-                      onClick={() => isMobile && closeItem(false)}
-                    >
-                      Sign Up
                     </Link>
                   </li>
                 </motion.div>
@@ -119,12 +118,7 @@ const NavLinks = ({
                     >
                       Add Photo
                     </Dropdown.Item>
-                    <Dropdown.Item
-                      href="/addgame"
-                      onClick={() => isMobile && closeItem(false)}
-                    >
-                      Add Game
-                    </Dropdown.Item>
+
                     <Dropdown.Item
                       href="/addmusic"
                       onClick={() => isMobile && closeItem(false)}

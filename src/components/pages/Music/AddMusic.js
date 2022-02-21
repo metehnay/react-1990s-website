@@ -48,10 +48,13 @@ const AddMusic = ({ isAuth }) => {
             onChange={(e) => setMusicEmbed(e.target.value)}
           >
             <Form.Label column sm={2}>
-              Music Embed
+              Music URL
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="Music Embed" />
+              <Form.Control
+                type="text"
+                placeholder="Music URL (Youtube Only)"
+              />
             </Col>
           </Form.Group>
 

@@ -96,7 +96,10 @@ const Login = ({ setIsAuth, isAuth }) => {
         </Card.Body>
       </Card>
       <div className="ds w-100 text-center mt-2 ds">
-        Don't have an account? <Link to="/signup">Sign Up</Link>
+        Don't have an account?{" "}
+        <Link to="/signup">
+          <span className="signo">Sign Up</span>
+        </Link>
       </div>
     </>
   );

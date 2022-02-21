@@ -23,18 +23,20 @@ const Musics = () => {
   return (
     <div className="music-container">
       <div className="height">
-        {musicList.map((musics) => {
-          let embedChange = musics.musicEmbed;
-          let newEmbed = embedChange.replace("watch?v=", "embed/");
+        {musicList
+          .slice(0)
+          .reverse()
+          .map((musics) => {
+            let embedChange = musics.musicEmbed;
+            let newEmbed = embedChange.replace("watch?v=", "embed/");
 
-          console.log(embedChange);
-          let patos = embedChange.replace(
-            "https://www.youtube.com/watch?v=",
-            ""
-          );
-          return (
-            <div className="musics">
-              <div className="inside-musics">
+            console.log(embedChange);
+            let patos = embedChange.replace(
+              "https://www.youtube.com/watch?v=",
+              ""
+            );
+            return (
+              <div className="musics">
                 <div className="music1">
                   <img
                     src={`https://img.youtube.com/vi/${patos}/mqdefault.jpg`}
@@ -42,7 +44,10 @@ const Musics = () => {
                   />
                   <div className="gridso">
                     <h2 id="music-title">{musics.musicTitle}</h2>
-
+                    <div className="flexo">
+                      <img src={musics.photoURL} id="music-img" />
+                      <p id="music-name">{musics.name}</p>
+                    </div>
                     <MusicModal
                       musicTitle={musics.musicTitle}
                       musicEmbed={newEmbed}
@@ -50,9 +55,8 @@ const Musics = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );

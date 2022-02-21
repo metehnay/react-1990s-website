@@ -13,7 +13,7 @@ const VideoModal = ({ videoTitle, videoEmbed }) => {
 
   return (
     <div>
-      <button className="music-btn" variant="warning" onClick={handleShow}>
+      <button className="video-btn" variant="warning" onClick={handleShow}>
         Play
       </button>
       <Modal

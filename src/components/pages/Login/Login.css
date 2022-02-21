@@ -25,3 +25,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.signo {
+  color: yellow;
+}
