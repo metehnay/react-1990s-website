@@ -5,7 +5,7 @@ import { auth, db } from "../../../firebase-config";
 import mp3file from "./boogie.mp3";
 import Footer from "../../Footer";
 import funo from "./funo.png";
-import ArcadeGame from "../Game/ArcadeGame";
+import ArcadeGame from "../Games/ArcadeGame";
 
 const Home = ({ isAuth, modu, setModu }) => {
   const [postLists, setPostList] = useState([]);

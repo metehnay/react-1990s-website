@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Modal, Button, RouteModal } from "react-bootstrap";
 import Iframe from "react-iframe";
-import "./Musics.css";
 
-const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
+const GameModal = ({ gameTitle, gameEmbed }) => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -13,7 +12,7 @@ const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
 
   return (
     <div>
-      <button className="music-btn" variant="warning" onClick={handleShow}>
+      <button className="video-btn" variant="warning" onClick={handleShow}>
         Play
       </button>
       <Modal
@@ -25,7 +24,7 @@ const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
       >
         <Modal.Body>
           <Iframe
-            url={musicEmbed}
+            url={gameEmbed}
             width="100%"
             height="450px"
             id="myId"
@@ -44,4 +43,4 @@ const MusicModal = ({ musicTitle, musicEmbed, musicImage }) => {
   );
 };
 
-export default MusicModal;
+export default GameModal;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import "./Arcade.css";
+import "./Games.css";
 import { Modal, Button } from "react-bootstrap";
 
 const ArcadeGame = () => {

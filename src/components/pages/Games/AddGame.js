@@ -2,22 +2,20 @@ import React, { useState, useEffect } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../../../firebase-config";
 import { useNavigate } from "react-router-dom";
-import "./NewGame.css";
+import "./Games.css";
 import { Form, Button, Row, Col, Card, Container } from "react-bootstrap";
 
-const NewGame = ({ isAuth }) => {
-  const [frame, setFrame] = useState("");
-  const [picURL, setPicURL] = useState("");
+const AddGame = ({ isAuth }) => {
+  const [gameEmbed, setGameEmbed] = useState("");
   const [gameTitle, setGameTitle] = useState("");
 
-  const postsCollectionRef = collection(db, "frames");
+  const postsCollectionRef = collection(db, "games");
   let navigate = useNavigate();
 
   const createPost = async () => {
     await addDoc(postsCollectionRef, {
+      gameEmbed,
       gameTitle,
-      picURL,
-      frame,
       name: auth.currentUser.displayName,
       id: auth.currentUser.uid,
 
@@ -38,7 +36,7 @@ const NewGame = ({ isAuth }) => {
             <Col sm={10}>
               <Form.Control
                 type="text"
-                placeholder="Photo Title..."
+                placeholder="Game Title..."
                 onChange={(e) => setGameTitle(e.target.value)}
               />
             </Col>
@@ -47,26 +45,13 @@ const NewGame = ({ isAuth }) => {
           <Form.Group
             as={Row}
             className="mb-2"
-            onChange={(e) => setFrame(e.target.value)}
+            onChange={(e) => setGameEmbed(e.target.value)}
           >
             <Form.Label column sm={2}>
-              Game Frame SRC
+              Game Iframe
             </Form.Label>
             <Col sm={10}>
-              <Form.Control type="text" placeholder="Not Required..." />
-            </Col>
-          </Form.Group>
-
-          <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-            <Form.Label column sm={2}>
-              Game Picture
-            </Form.Label>
-            <Col sm={10}>
-              <Form.Control
-                type="text"
-                placeholder="Photo URL..."
-                onChange={(e) => setPicURL(e.target.value)}
-              />
+              <Form.Control type="text" placeholder="Game Iframe" />
             </Col>
           </Form.Group>
 
@@ -77,10 +62,16 @@ const NewGame = ({ isAuth }) => {
               </Button>
             </Col>
           </Form.Group>
+          <p className="notu">
+            video links should be like this.
+            <span className="blue">
+              " https://www.youtube.com/watch?v=ZyhrYis509A "
+            </span>
+          </p>
         </Form>
       </Container>
     </>
   );
 };
 
-export default NewGame;
+export default AddGame;

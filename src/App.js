@@ -11,14 +11,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SignUp from "./components/pages/SignUp/SignUp";
 import Footer from "./components/Footer";
 import ForgotPassword from "./components/pages/ForgotPassword/ForgotPassword";
-import ArcadeGame from "./components/pages/Game/ArcadeGame";
-import ArcadeRoom from "./components/pages/Game/ArcadeRoom";
-import NewGame from "./components/pages/Game/NewGame";
-import GameComponent from "./components/pages/Game/GameComponent";
 import AddMusic from "./components/pages/Music/AddMusic";
 import Musics from "./components/pages/Music/Musics";
 import Videos from "./components/pages/Videos/Videos";
 import AddVideo from "./components/pages/Videos/AddVideo";
+import Games from "./components/pages/Games/Games";
+import AddGame from "./components/pages/Games/AddGame";
+import ArcadeGame from "./components/pages/Games/ArcadeGame";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -48,9 +47,9 @@ function App() {
           <Route path="/newpost" element={<CreatePost isAuth={isAuth} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/arcadegames" element={<ArcadeRoom />} />
-          <Route path="/addgame" element={<NewGame />} />
-          <Route path="/games" element={<GameComponent />} />
+          <Route path="/arcadegames" element={<ArcadeGame />} />
+          <Route path="/addgame" element={<AddGame />} />
+          <Route path="/games" element={<Games />} />
           <Route path="/addmusic" element={<AddMusic />} />
           <Route path="/musics" element={<Musics />} />
           <Route path="/videos" element={<Videos />} />

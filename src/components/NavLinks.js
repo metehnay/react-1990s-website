@@ -118,12 +118,21 @@ const NavLinks = ({
                     >
                       Add Photo
                     </Dropdown.Item>
+                    <Dropdown.Divider />
 
                     <Dropdown.Item
                       href="/addmusic"
                       onClick={() => isMobile && closeItem(false)}
                     >
                       Add Music
+                    </Dropdown.Item>
+                    <Dropdown.Divider />
+
+                    <Dropdown.Item
+                      href="/addgame"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      Add Game
                     </Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item
