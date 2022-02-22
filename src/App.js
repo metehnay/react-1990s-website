@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/pages/Home/Home";
 import Header from "./components/Header";
 import Login from "./components/pages/Login/Login";
-import React, { useState } from "react";
+import React, { Profiler, useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config";
 import CreatePost from "./components/pages/NewPost/CreatePost";
@@ -18,6 +18,8 @@ import AddVideo from "./components/pages/Videos/AddVideo";
 import Games from "./components/pages/Games/Games";
 import AddGame from "./components/pages/Games/AddGame";
 import ArcadeGame from "./components/pages/Games/ArcadeGame";
+import Profile from "./components/pages/Profile/Profile";
+import ProfileLog from "./components/pages/Profile/ProfileLog";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -54,6 +56,7 @@ function App() {
           <Route path="/musics" element={<Musics />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/addvideo" element={<AddVideo />} />
+          <Route path="/profile" element={<ProfileLog />} />
         </Routes>
       </Router>
     </>

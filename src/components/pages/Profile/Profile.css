@@ -1,0 +1,33 @@
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.fields {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+#fileo {
+  color: #fff;
+  border: none;
+}
+
+#profil {
+  padding-top: 13rem;
+  color: #000;
+}
+
+#nameso {
+  color: #000;
+  display: flex;
+}
+
+.span {
+  font-weight: bold;
+}
+.upload {
+  margin-top: 1.4rem;
+}

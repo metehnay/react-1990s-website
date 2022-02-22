@@ -11,6 +11,8 @@ li {
 a {
   text-decoration: none !important;
   list-style-type: none !important;
+  font-family: var(--header-font) !important;
+
   color: #fff !important;
 }
 

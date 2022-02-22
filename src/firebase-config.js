@@ -1,7 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { useEffect, useState } from "react";
+
 import { getFirestore } from "firebase/firestore";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
+  updateProfile,
+} from "firebase/auth";
+import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD0kgCwX_4vzsilsbGyx3cj-2RLGUBZHz8",
@@ -16,4 +27,30 @@ const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+const storage = getStorage();
 export const provider = new GoogleAuthProvider();
+
+export function useAuth() {
+  const [currentUser, setCurrentUser] = useState();
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (user) => setCurrentUser(user));
+    return unsub;
+  }, []);
+
+  return currentUser;
+}
+
+export async function upload(file, currentUser, setLoading) {
+  const fileRef = ref(storage, currentUser.uid + ".png");
+
+  setLoading(true);
+
+  const snapshot = await uploadBytes(fileRef, file);
+  const photoURL = await getDownloadURL(fileRef);
+
+  updateProfile(currentUser, { photoURL });
+
+  setLoading(false);
+  alert("Your Avatar Changed!");
+}

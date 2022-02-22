@@ -14,13 +14,15 @@ body.s80 {
   --po: 17px;
   --texto: #000;
   --header: #191919;
+  --header-font: "Roboto Mono", monospace;
 }
 
 body.dark {
   background: rgb(36, 62, 115);
   background: linear-gradient(90deg, #000000 0%, #131212 35%, #000000 100%);
   --backo: #191919;
-  --fontu: "Press Start 2P", cursive;
+  --fontu: "Roboto Mono", monospace;
+  --header-font: "Press Start 2P", cursive;
   --size: 16px;
   --header: blue;
   --p: 14px;

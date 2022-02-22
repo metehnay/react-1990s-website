@@ -5,12 +5,15 @@ import MobileNavigation from "./MobileNavigation";
 import { signOut } from "firebase/auth";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 import { auth } from "../firebase-config";
+import { useAuth, upload } from "../firebase-config";
+
 import { Link } from "react-router-dom";
 import DarkMode from "./DarkMode";
 const NavLinks = ({
   isMobile,
   closeItem,
   isAuth,
+  photoURL,
   setIsAuth,
   modu,
   setModu,
@@ -22,6 +25,8 @@ const NavLinks = ({
       window.location.pathname = "/";
     });
   };
+
+  const currentUser = useAuth();
 
   const animateForm = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
@@ -143,6 +148,20 @@ const NavLinks = ({
                     </Dropdown.Item>
                   </DropdownButton>
                 </li>
+                <motion.div
+                  initial={animateForm}
+                  animate={animateTo}
+                  transition={{ delay: 0.05 }}
+                >
+                  <li>
+                    <Link
+                      to="/profile"
+                      onClick={() => isMobile && closeItem(false)}
+                    >
+                      <img src={currentUser?.photoURL} className="avatar" />
+                    </Link>
+                  </li>
+                </motion.div>
                 <motion.div
                   initial={animateForm}
                   animate={animateTo}
