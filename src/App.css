@@ -35,7 +35,6 @@ li:hover,
   nav {
     display: flex !important;
     justify-content: flex-end !important;
-    background-color: blue !important;
     padding-right: 3px;
   }
 }

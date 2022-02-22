@@ -33,7 +33,7 @@ a {
   position: sticky;
   top: 0rem;
   z-index: 99999;
-  background-color: #191919;
+  background-color: var(--header);
 }
 
 #login {
