@@ -21,23 +21,23 @@ const Games = () => {
   }, []);
 
   return (
-    <div className="video-container">
-      <div className="video-height">
+    <div className="game-container">
+      <div className="game-height">
         {gameList.map((gam) => {
           return (
-            <div className="videos">
-              <div className="video1">
-                <img src="yok.jpg" id="music-thumb" />
-                <div className="video-gridso">
-                  <h2 id="video-title">{gam.gameTitle}</h2>
+            <div className="games">
+              <div className="game">
+                <img src={gam.gameImage} id="game-thumb" />
+                <div className="game-gridso">
+                  <h2 id="game-title">{gam.gameTitle}</h2>
                   <div className="flexo">
                     <img src={gam.photoURL} id="music-img" />
                     <p id="music-name">{gam.name}</p>
+                    <GameModal
+                      gameTitle={gam.gameTitle}
+                      gameEmbed={gam.gameEmbed}
+                    />
                   </div>
-                  <GameModal
-                    gameTitle={gam.gameTitle}
-                    gameEmbed={gam.gameEmbed}
-                  />
                 </div>
               </div>
             </div>

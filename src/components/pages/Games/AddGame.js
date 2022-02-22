@@ -8,6 +8,7 @@ import { Form, Button, Row, Col, Card, Container } from "react-bootstrap";
 const AddGame = ({ isAuth }) => {
   const [gameEmbed, setGameEmbed] = useState("");
   const [gameTitle, setGameTitle] = useState("");
+  const [gameImage, setGameImage] = useState("");
 
   const postsCollectionRef = collection(db, "games");
   let navigate = useNavigate();
@@ -16,6 +17,7 @@ const AddGame = ({ isAuth }) => {
     await addDoc(postsCollectionRef, {
       gameEmbed,
       gameTitle,
+      gameImage,
       name: auth.currentUser.displayName,
       id: auth.currentUser.uid,
 
@@ -55,6 +57,19 @@ const AddGame = ({ isAuth }) => {
             </Col>
           </Form.Group>
 
+          <Form.Group
+            as={Row}
+            className="mb-2"
+            onChange={(e) => setGameImage(e.target.value)}
+          >
+            <Form.Label column sm={2}>
+              Game Image
+            </Form.Label>
+            <Col sm={10}>
+              <Form.Control type="text" placeholder="Game Iframe" />
+            </Col>
+          </Form.Group>
+
           <Form.Group as={Row} className="mb-3">
             <Col sm={{ span: 10, offset: 2 }}>
               <Button variant="warning" onClick={createPost}>
@@ -63,9 +78,9 @@ const AddGame = ({ isAuth }) => {
             </Col>
           </Form.Group>
           <p className="notu">
-            video links should be like this.
+            game links should be just embed url. like this.
             <span className="blue">
-              " https://www.youtube.com/watch?v=ZyhrYis509A "
+              " https://www.retrogames.cc/embed/34952-basketbrawl-europe.html "
             </span>
           </p>
         </Form>

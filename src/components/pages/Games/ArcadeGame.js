@@ -12,15 +12,15 @@ const ArcadeGame = () => {
     <div>
       <button onClick={handleShow}>PLAY GAME</button>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal id="mods" show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <iframe
             id="frame"
-            src="https://www.retrogames.cc/embed/35015-ms-pac-man-usa.html"
-            width="600"
+            src="https://www.retrogames.cc/embed/29209-sonic-knuckles-sonic-the-hedgehog-3-world.html"
+            width="100%"
             height="450"
             frameborder="no"
             allowfullscreen="true"

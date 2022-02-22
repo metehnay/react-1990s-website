@@ -25,20 +25,39 @@ li {
 }
 
 li:hover,
-a:hover {
+.Navbar a:hover {
   color: rgb(243, 234, 95) !important;
   transform: scale3d(1.1, 1.1, 1.1);
   transition: 0.5s all;
 }
 
-@media (max-width: 1235px) {
-  .posto {
-    grid-template-columns: 1fr 1fr 1fr !important;
-  }
+@media (max-width: 1535px) {
   nav {
     display: flex !important;
     justify-content: flex-end !important;
-    margin: 5px;
+    background-color: blue !important;
+    padding-right: 3px;
+  }
+}
+
+@media (max-width: 1225px) {
+  #log {
+    width: 180px;
+    height: 60px;
+    left: 0.2rem;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 1075px) {
+  #log {
+    display: none;
+  }
+}
+
+@media (max-width: 1235px) {
+  .posto {
+    grid-template-columns: 1fr 1fr 1fr !important;
   }
 }
 
@@ -113,6 +132,10 @@ a:hover {
     width: 190px;
     margin: 10px;
   }
+
+  #darkMode {
+    display: none;
+  }
 }
 
 @media (max-width: 781px) {
@@ -170,10 +193,6 @@ a:hover {
   li {
     margin: 10px auto !important;
     opacity: 1;
-  }
-
-  #darkMode {
-    display: none;
   }
 }
 

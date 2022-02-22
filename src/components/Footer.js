@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="left">
         <p>User photos coming from Random User API.</p>
         <a href="https://clever-engelbart-4c549f.netlify.app/">
-          <p id="px">
+          <p id="dx">
             Checkout my random user api project{" "}
             <BsFillArrowRightCircleFill id="ikon" />
           </p>{" "}

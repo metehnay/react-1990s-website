@@ -12,6 +12,8 @@
 .video-container {
   margin-top: 40px;
   display: flex;
+  padding-top: 30px;
+
   flex-direction: column;
 }
 

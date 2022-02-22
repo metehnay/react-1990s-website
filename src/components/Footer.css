@@ -15,10 +15,14 @@
   margin-left: 0.5rem;
 }
 
-#px {
+#dx {
   margin-top: 1rem;
   display: flex;
   flex-direction: row;
+}
+
+#dx:hover {
+  color: yellow;
 }
 
 .center {
