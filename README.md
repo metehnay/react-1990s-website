@@ -1,4 +1,6 @@
-DEMO: https://backtothe-90s.netlify.app/
+DEMO ENGLISH (AUTO UPDATED): https://backtothe-90s.netlify.app/
+
+DEMO TURKISH (OLD VERSION): https://nostalji90lar.netlify.app/
 
 
 # Getting Started with Create React App
