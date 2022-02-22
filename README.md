@@ -1,6 +1,7 @@
-DEMO: https://frosty-ardinghelli-a8970c.netlify.app/
+English Demo. [Auto Updated] https://backtothe-90s.netlify.app/
 
-still in progress. not responsive etc. 
+Turkish Demo. [Not Updated] https://nostalji90lar.netlify.app/
+
 
 # Getting Started with Create React App
 
