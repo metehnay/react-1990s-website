@@ -24,8 +24,6 @@ export default function Profile() {
     setShow(true);
   };
 
-  const tomi = useAuth();
-
   function handleClick() {
     upload(photo, currentUser, setLoading);
   }

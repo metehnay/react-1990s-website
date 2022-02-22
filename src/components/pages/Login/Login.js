@@ -28,7 +28,7 @@ const Login = ({ setIsAuth, isAuth }) => {
       localStorage.setItem("isAuth", true);
 
       setIsAuth(true);
-      navigate("/");
+      navigate("/profile");
     } catch (error) {
       console.log(error.message);
     }

@@ -158,7 +158,16 @@ const NavLinks = ({
                       to="/profile"
                       onClick={() => isMobile && closeItem(false)}
                     >
-                      <img src={currentUser?.photoURL} className="avatar" />
+                      {currentUser?.photoURL ? (
+                        <img src={currentUser?.photoURL} className="avatar" />
+                      ) : (
+                        <img
+                          src={
+                            "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+                          }
+                          className="avatar"
+                        />
+                      )}
                     </Link>
                   </li>
                 </motion.div>
