@@ -1,6 +1,7 @@
 English Demo. [Auto Updated] https://backtothe-90s.netlify.app/
 
 Turkish Demo. [Not Updated] https://nostalji90lar.netlify.app/
+![final_6219569a6b56a30077f99b3c_552519](https://user-images.githubusercontent.com/99619400/155811273-ddc59a35-3475-41e1-979d-ed128c6ab1ee.gif)
 
 
 # Getting Started with Create React App
